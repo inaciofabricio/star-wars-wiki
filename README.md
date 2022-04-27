@@ -14,7 +14,7 @@ Este projeto foi pensando para estudar o ReactJS, usando uma API de Star Wars.
 ![nome_da_imagem.extensão](https://github.com/inaciofabricio/star-wars-wiki/blob/main/public/sw-responsive.jpg)
 
 ## Heroku
-É possivel testar a aplicação no link: ()
+É possivel testar a aplicação no link: (https://star-wars-wiki.000webhostapp.com/)
 
 ## Sobre o React
 
