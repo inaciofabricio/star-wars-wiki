@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import AppRouter from './components/AppRouter';
+import { GlobalStyle } from './components/GlobalSyle';
+import styled, {ThemeProvider} from 'styled-components';
+import {temaClaro, temaEscuro} from './components/UI/temas';
+import { useState } from 'react';
+
+const Body = styled.div`
+  padding-right: 3rem;
+  padding-left: 3rem;
+  height: 100vh;
+
+  @media (max-width: 400px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+`;
 
 function App() {
+
+  const [tema, setTema] = useState(true);
+
+  function mudarThema() {
+    setTema((tema) => !tema);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={tema ? temaEscuro : temaClaro }>
+      <GlobalStyle theme={tema ? temaEscuro : temaClaro }/>
+      <Body>
+        <AppRouter mudarThema={mudarThema} tema={tema}/>
+      </Body>
+    </ThemeProvider>
   );
 }
 
