@@ -1,4 +1,4 @@
-# World-Marvel Wiki
+# Star Wars React Wiki
 
 Este projeto foi pensando para estudar o ReactJS, usando uma API de Star Wars.
 
