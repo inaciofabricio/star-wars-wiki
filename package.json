@@ -2,6 +2,7 @@
   "name": "star-wars",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
@@ -19,7 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
